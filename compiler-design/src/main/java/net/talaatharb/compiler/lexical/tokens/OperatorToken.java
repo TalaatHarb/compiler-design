@@ -24,7 +24,7 @@ public class OperatorToken extends AbstractToken {
 	
 	@Override
 	public String toString() {
-		return "< Operator, " + operator.toString() +" >";
+		return "< Operator, " + operator.toString() + " > @ " + getLocation().toString();
 	}
 
 }

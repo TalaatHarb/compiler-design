@@ -23,7 +23,7 @@ public class IdentifierToken extends AbstractToken {
 	
 	@Override
 	public String toString() {
-		return "< Identifier, " + name + " >";
+		return "< Identifier, " + name + " > @ " + getLocation().toString();
 	}
 
 }

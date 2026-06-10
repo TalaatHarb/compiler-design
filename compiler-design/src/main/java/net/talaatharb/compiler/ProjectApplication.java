@@ -10,9 +10,14 @@ public class ProjectApplication {
 		log.info("Application Started");
 
 		var fileContents = """
-				int calculateX() {
-					int x = 1 + 2;
-					return x;
+				/** Function to calculate the value of y based on some math
+				 *  @param a the first number
+				 *  @param b the second number
+				 *  @return the value of y
+				 */
+				int calculateY(int a, int b) {
+					int y = a * b + (a - b) / 2; // some math
+					return y;
 				}
 				""";
 

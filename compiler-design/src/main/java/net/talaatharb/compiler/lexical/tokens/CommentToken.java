@@ -20,5 +20,10 @@ public class CommentToken extends AbstractToken {
 	public TokenEnum getTokenType() {
 		return TokenEnum.COMMENT;
 	}
+	
+	@Override
+	public String toString() {
+		return "< Comment, " + value + " > @ " + getLocation().toString();
+	}
 
 }

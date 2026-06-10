@@ -35,7 +35,7 @@ public class NumericToken extends AbstractToken {
 	
 	@Override
 	public String toString() {
-		return "< Number, " + type + ", " + value + " >";
+		return "< Number, " + type + ", " + value + " > @ " + getLocation().toString();
 	}
 
 }

@@ -24,5 +24,10 @@ public class StringToken extends AbstractToken {
 	public TokenEnum getTokenType() {
 		return TokenEnum.STRING_CONSTANT;
 	}
+	
+	@Override
+	public String toString() {
+		return "< String, " + value + " > @ " + getLocation().toString();
+	}
 
 }

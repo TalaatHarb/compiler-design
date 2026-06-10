@@ -24,7 +24,7 @@ public class KeywordToken extends AbstractToken {
 	
 	@Override
 	public String toString() {
-		return "< Keyword, " + keyword.toString() + " >";
+		return "< Keyword, " + keyword.toString() + " > @ " + getLocation().toString();
 	}
 
 }

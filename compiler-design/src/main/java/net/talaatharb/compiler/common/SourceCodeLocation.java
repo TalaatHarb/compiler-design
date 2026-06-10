@@ -20,4 +20,9 @@ public class SourceCodeLocation implements Serializable{
 		this.column = column;
 		this.fileFullName = "unknown";
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s:%d:%d", fileFullName, row, column);
+	}
 }

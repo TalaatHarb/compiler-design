@@ -1,5 +1,8 @@
 package net.talaatharb.compiler.lexical.enums;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
@@ -8,6 +11,8 @@ public enum OperatorEnum {
 
 	PLUS("+"),
 	MINUS("-"),
+	MULTIPLY("*"),
+	DIVIDE("/"),
 	LESS_THAN_OR_EQUAL("=<"),
 	EQUALS("=="),
 	ASSIGNMENT("="),
@@ -20,11 +25,25 @@ public enum OperatorEnum {
 	NOT("!"), 
 	;
 	
+	private static final Map<String, OperatorEnum> dictionary = buildDictionary();
+	
 	@Getter
 	private final String representation;
 	
 	@Override
 	public String toString() {
 		return representation;
+	}
+	
+	private static final Map<String, OperatorEnum> buildDictionary(){
+		Map<String, OperatorEnum> map = new HashMap<>();
+		for(var keyword : values()) {
+			map.put(keyword.getRepresentation(), keyword);
+		}
+		return map;
+	}
+	
+	public static final OperatorEnum whichOperator(String string) {
+		return dictionary.get(string);
 	}
 }

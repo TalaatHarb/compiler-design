@@ -24,7 +24,7 @@ public class SpecialCharacterToken extends AbstractToken {
 	
 	@Override
 	public String toString() {
-		return "< Special Character, " + character.toString() +" >";
+		return "< Special Character, " + character.toString() + " > @ " + getLocation().toString();
 	}
 
 }

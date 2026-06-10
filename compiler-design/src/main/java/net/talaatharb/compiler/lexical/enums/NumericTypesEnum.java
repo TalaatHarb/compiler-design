@@ -7,4 +7,8 @@ public enum NumericTypesEnum {
 	 */
 	INTEGER,
 	
+	/**
+	 * Floating point values
+	 */
+	FLOAT,
 }
