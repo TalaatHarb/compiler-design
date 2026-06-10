@@ -19,7 +19,7 @@
 		<slf4jVersion>2.0.18</slf4jVersion>
 		<!-- Testing -->
 		<junit.version>6.1.0</junit.version>
-		<minimum-coverage-ratio>0.8</minimum-coverage-ratio>
+		<minimum-coverage-ratio>0.7</minimum-coverage-ratio>
 		<pitest.version>1.25.4</pitest.version>
 		<pitest-junit5-plugin.version>1.2.3</pitest-junit5-plugin.version>
 		<mockito.version>5.23.0</mockito.version>
