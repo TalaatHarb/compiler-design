@@ -13,14 +13,6 @@ public class NumericToken extends AbstractToken {
 	private final NumericTypesEnum type;
 
 	private final String value;
-
-	public NumericToken(SourceCodeLocation location) {
-		this(location, "0");
-	}
-	
-	public NumericToken(SourceCodeLocation location, String value) {
-		this(location, value, NumericTypesEnum.INTEGER);
-	}
 	
 	public NumericToken(SourceCodeLocation location, String value, NumericTypesEnum type) {
 		super(location);

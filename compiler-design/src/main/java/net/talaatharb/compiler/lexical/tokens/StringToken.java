@@ -10,10 +10,6 @@ import net.talaatharb.compiler.lexical.enums.TokenEnum;
 public class StringToken extends AbstractToken {
 	
 	private final String value;
-
-	public StringToken(SourceCodeLocation location) {
-		this(location, "");
-	}
 	
 	public StringToken(SourceCodeLocation location, String value) {
 		super(location);

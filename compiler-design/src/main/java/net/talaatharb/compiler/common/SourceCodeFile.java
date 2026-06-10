@@ -14,7 +14,7 @@ public class SourceCodeFile {
 	
 	
 	public SourceCodeFile(String contents) {
-		this(contents, "unknown");
+		this("unknown", contents);
 	}
 
 }

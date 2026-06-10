@@ -15,12 +15,6 @@ public class SourceCodeLocation implements Serializable{
 	private final int row;
 	private final int column;
 	
-	public SourceCodeLocation(int row, int column) {
-		this.row = row;
-		this.column = column;
-		this.fileFullName = "unknown";
-	}
-	
 	@Override
 	public String toString() {
 		return String.format("%s:%d:%d", fileFullName, row, column);
