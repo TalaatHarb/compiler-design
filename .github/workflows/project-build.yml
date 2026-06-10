@@ -20,4 +20,6 @@ jobs:
           cache: 'maven'
       
       - name: Build and verify with Maven
-        run: cd compiler-design && mvn clean compile verify package
+        run: cd compiler-design && mvn clean compile verify package -DnvdApiKey=$NVD_API_KEY
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
