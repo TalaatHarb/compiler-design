@@ -3,6 +3,7 @@ package net.talaatharb.compiler;
 import lombok.extern.slf4j.Slf4j;
 import net.talaatharb.compiler.common.SourceCodeFile;
 import net.talaatharb.compiler.lexical.LexicalAnalyzer;
+import net.talaatharb.compiler.syntax.SyntaxParser;
 
 @Slf4j
 public class ProjectApplication {
@@ -24,11 +25,19 @@ public class ProjectApplication {
 		SourceCodeFile sourceCodeFile = new SourceCodeFile("testFile.txt", fileContents);
 		log.info("Source code file: {} \n{}", sourceCodeFile.getFileName(), sourceCodeFile.getContents());
 
-		LexicalAnalyzer analyzer = new LexicalAnalyzer();
-		var output = analyzer.analyzeFile(sourceCodeFile);
+		var lexicalAnalyzer = new LexicalAnalyzer();
+		var lexicalOutput = lexicalAnalyzer.analyzeFile(sourceCodeFile);
 
-		var tokens = output.getTokens();
+		var tokens = lexicalOutput.getTokens();
 		log.info("Tokens:");
 		tokens.forEach(token -> log.info("{}", token.toString()));
+		
+		log.info("");
+		
+		var parser = new SyntaxParser();
+		var parserOutput = parser.parse(lexicalOutput);
+		
+		log.info("Parse tree: {}", parserOutput.getParseTree());
+		
 	}
 }
